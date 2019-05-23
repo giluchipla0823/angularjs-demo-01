@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h3>Contact page</h3>
+    <h3>Contact page - Template Validation</h3>
 </div>
 
 <div class="row">
@@ -12,7 +12,7 @@
                        class="form-control" 
                        id="name" 
                        name="name"
-                       ng-model="form.data.name"
+                       ng-model="vm.form.data.name"
                        required />
 
                 <div ng-messages="frm_contact.name.$error"
@@ -30,7 +30,7 @@
                         class="form-control" 
                         id="lastname" 
                         name="lastname"
-                        ng-model="form.data.lastname"
+                        ng-model="vm.form.data.lastname"
                         required />
 
                 <div ng-messages="frm_contact.lastname.$error"
@@ -48,7 +48,7 @@
                         class="form-control" 
                         id="email" 
                         name="email"
-                        ng-model="form.data.email"
+                        ng-model="vm.form.data.email"
                         required
                         ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" />
 
@@ -73,7 +73,7 @@
                         class="form-control" 
                         id="subject" 
                         name="subject"
-                        ng-model="form.data.subject"
+                        ng-model="vm.form.data.subject"
                         required />
 
                 <div ng-messages="frm_contact.subject.$error"
@@ -91,7 +91,7 @@
                           class="form-control" 
                           id="message" 
                           name="message"
-                          ng-model="form.data.message"
+                          ng-model="vm.form.data.message"
                           required></textarea>
 
                 <div ng-messages="frm_contact.message.$error"
@@ -110,7 +110,7 @@
             </div>
         </form>
 
-        <pre>{{ form.data | json }}</pre>
+        <pre>{{ vm.form.data | json }}</pre>
         <pre>{{ this.frm_contact.email.$error | json }}</pre>
     </div>
 </div>

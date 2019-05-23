@@ -5,16 +5,22 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: 'templates/home.tpl.html'
+                    templateUrl: 'templates/home/home.tpl.html'
                     , controller: 'HomeController'
                 })
                 .when('/about', {
-                    templateUrl: 'templates/about.tpl.html'
+                    templateUrl: 'templates/about/about.tpl.html'
                     , controller: 'AboutController'
                 })
-                .when('/contact', {
-                    templateUrl: 'templates/contact.tpl.html'
-                    , controller: 'ContactController'
+                .when('/contact/template-validation', {
+                    templateUrl: 'templates/contact/template-validation.tpl.html'
+                    , controller: 'TemplateValidationController'
+                    , controllerAs: 'vm'
+                })
+                .when('/contact/plugin-validation', {
+                    templateUrl: 'templates/contact/plugin-validation.tpl.html'
+                    , controller: 'PluginValidationController'
+                    , controllerAs: 'vm'
                 })
                 .otherwise({
                     redirectTo: '/'

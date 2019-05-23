@@ -8,6 +8,8 @@
         <meta name="author" content="Gino Luiggi Chirinos Plasencia">
         <title>ANGULARJS - DEMO 01</title>
 
+        <base id="base-app" href="/angularjs-demos/angularjs-demo-01/app/">
+
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -17,6 +19,7 @@
 
         <div id="wrap-container" class="container">
             <div ng-view></div>
+          
         </div>
 
         <app-footer></app-footer>
@@ -28,10 +31,10 @@
         <script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
         <script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
         <script type="text/javascript" src="../node_modules/angular-messages/angular-messages.min.js"></script>
-
-
+        <script type="text/javascript" src="../node_modules/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
 
         <script type="text/javascript" src="./assets/js/main/app.js"></script>
+        <script type="text/javascript" src="./assets/js/main/app.constants.js"></script>
         <script type="text/javascript" src="./assets/js/main/app.routes.js"></script>
         <script type="text/javascript" src="./assets/js/main/app.run.js"></script>
         <script type="text/javascript" src="./assets/js/main/app.controllers.js"></script>
@@ -41,7 +44,7 @@
         <script type="text/javascript" src="./assets/js/main/controllers/contactController.js"></script>
 
         <script type="text/javascript">
-            angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+           //angular.element(document.getElementById('base-app')).attr('href', window.location.pathname);
         </script>
     </body>
 </html>

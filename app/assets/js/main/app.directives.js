@@ -18,7 +18,7 @@
                 , link: function(scope, elem, attr, ctrl) {
                     var routerLink = attr.routerLink;
 
-                    elem.children('a').attr('href', '.' + routerLink);
+                    elem.attr('href', '.' + routerLink);
 
                     scope.$watch(
                         function(){
@@ -29,12 +29,18 @@
                                 return false;
                             }
 
+                            if(!newValue.$$route){
+                                return false;
+                            }
+
                             if(newValue.$$route.originalPath === routerLink){
+                                var $_parent = elem.parents('[router-link-active]');
+
                                 elem.parents('ul.nav.navbar-nav')
                                     .children('li')
                                     .removeClass('active');
 
-                                elem.addClass('active');
+                                $_parent.addClass($_parent.attr('router-link-active'));
                             }
                         }
                     );
