@@ -53,3 +53,8 @@ code {
 .jumbotron.jumbotron-home{
     margin-top: 40px;
 }
+
+.help-block.error-msg::before { 
+	content:" * ";
+	color:#a94442; 
+}

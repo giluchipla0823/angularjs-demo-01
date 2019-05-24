@@ -17,16 +17,18 @@
                 <li router-link-active="active">
                     <a router-link="/about">About</a>
                 </li>
-                <!-- <li router-link-active="active">
-                    <a router-link="/contact">Contact</a>
-                </li> -->
-
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a router-link="/contact/template-validation">Contact template validation</a></li>
                         <li><a router-link="/contact/plugin-validation">Contact plugin validation</a></li>
                     </ul>
+                </li>
+                <li router-link-active="active">
+                    <a router-link="/login">Login</a>
+                </li>
+                <li router-link-active="active">
+                    <a router-link="/signup">Sign up</a>
                 </li>
             </ul>
         </div>

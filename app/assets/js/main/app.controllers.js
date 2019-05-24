@@ -3,5 +3,6 @@
         'home.controllers'
         , 'about.controllers'
         , 'contact.controllers'
+        , 'access.controllers'
     ])
 })();

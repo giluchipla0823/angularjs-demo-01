@@ -1,6 +1,6 @@
-(function(){
+(function () {
     angular.module('app.routes', ['ngRoute'])
-        .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+        .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
             $locationProvider.html5Mode(true);
 
             $routeProvider
@@ -11,6 +11,14 @@
                 .when('/about', {
                     templateUrl: 'templates/about/about.tpl.html'
                     , controller: 'AboutController'
+                })
+                .when('/login', {
+                    templateUrl: 'templates/access/login.tpl.html'
+                    , controller: 'LoginController'
+                })
+                .when('/signup', {
+                    templateUrl: 'templates/access/signup.tpl.html'
+                    , controller: 'SignupController'
                 })
                 .when('/contact/template-validation', {
                     templateUrl: 'templates/contact/template-validation.tpl.html'
